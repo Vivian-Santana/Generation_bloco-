@@ -25,7 +25,7 @@ PRIMARY KEY (id),
 FOREIGN KEY (categoria_id) REFERENCES tb_categoria (id)
 );
 
-INSERT INTO tb_produto (nome, marca, preco, categoria_id)
+INSERT INTO tb_produto (produto, marca, preco, categoria_id)
 VALUES ('neosaldina', 'takeda', 5.90, 1),
 ('dipirona', 'EMS', 2.50, 1),
 ('loratadina', 'ache', 27.90, 1),
@@ -48,7 +48,3 @@ ORDER BY preco;
 SELECT * FROM tb_produto
 INNER JOIN tb_categoria ON tb_categoria.id  =  tb_produto.categoria_id
 ORDER BY produto;
-
-SELECT * FROM tb_produto
-INNER JOIN tb_categoria ON tb_categoria.id  =  tb_produto.categoria_id
-WHERE tb_categoria.id = 3;
